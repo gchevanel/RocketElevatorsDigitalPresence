@@ -26,14 +26,14 @@ $config['send_to']				= 'youremail@gmail.com';	// destination of all emails sent
 
 
 // Email Subject
-$config['subject']				= 'Smarty Contact Form';	// subject of emails you receive
+$config['subject']				= 'rocket Contact Form';	// subject of emails you receive
 
 
 
 
 /** ******************************************************* MISC ******************************************************* **/
 define('UPLOAD_FOLDER',		'_upload/');										// upload folder path - slash at the end!
-define('UPLOAD_FOLDER_URL',	'http://localhost/PRJ/Smarty/HTML/php/_upload/');	// Full url path to upload folder (used for contact files) - slash at the end!
+define('UPLOAD_FOLDER_URL',	'http://localhost/PRJ/rocket/HTML/php/_upload/');	// Full url path to upload folder (used for contact files) - slash at the end!
 define('UPLOAD_MAX_SIZE',	10000000);											// 1000000 = 10Mb
 
 
