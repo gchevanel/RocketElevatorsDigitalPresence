@@ -1,0 +1,24 @@
+{
+  "name": "rocket_elevators",
+  "version": "1.0.0",
+  "description": "calculate",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gchevanel/rocketelevator.git"
+  },
+  "author": "chevanel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gchevanel/rocketelevator/issues"
+  },
+  "homepage": "https://github.com/gchevanel/rocketelevator#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11"
+  }
+}

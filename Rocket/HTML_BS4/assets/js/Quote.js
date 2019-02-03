@@ -162,8 +162,51 @@ $(document).ready(function() {
       ) {
         // ------------------------------------------calcul for residential / standard ------------------------------------------
         if (calc_type === "standard") {
+        //   function CalcRes() {
+        //     var data = {
+        //           nbapartments: collected_vars.nbapartments,
+        //           nbfloors: collected_vars.nbfloors,
+        //           price: price,
+        //           feespercent: feespercent
+        //         }
+        //     $.post({
+        //         url: 'http://RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/res',
+        //         contentType: 'application/json',
+        //         data: JSON.stringify(data),
+        //         success: function (res) {
+        //             if (res.totalreal === null) {
+        //               $("#cage2").html("0");
+        //               $("#totsfees2").html("0$");
+        //               $("#fees").html("0$");
+        //               $("#total").html("0$");
+        //             }
+        //            else {
+        //             $("#cage2").html(data.nbcages);
+        //             console.log("cager")
+        //       $("#totsfees2").html(data.totalsfrais);
+        //       console.log("totsfees")
+
+        //       $("#fees").html(data.fees);
+        //       console.log("fees")
+
+        //       $("#total").html(data.totalreal);
+        //       console.log("total")
+
+        //            }
+        //         },
+        //         error: function(res) {
+        //             console.log(res);
+        //          }
+        // });
+        // }
+          
+          
+          
+          
+          
+          
           $.post(
-            "RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/api/res/",
+            "//RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/res",
             {
               nbapartments: collected_vars.nbapartments,
               nbfloors: collected_vars.nbfloors,
@@ -171,8 +214,8 @@ $(document).ready(function() {
               feespercent: feespercent
             },
 
-            function(data, status) {
-              console.log("data" + data + "status" + status);
+            function(data) {
+              // console.log("data" + data + "status" + status);
               $("#cage2").html(data.nbcages);
               $("#totsfees2").html(data.totalsfrais);
               $("#fees").html(data.fees);
@@ -183,7 +226,7 @@ $(document).ready(function() {
         // ------------------------------------------calcul for residential / premium ------------------------------------------
         else if (calc_type == "premium") {
           $.post(
-            "RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/api/res/",
+            "//RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/res",
             {
               nbapartments: collected_vars.nbapartments,
               nbfloors: collected_vars.nbfloors,
@@ -202,7 +245,7 @@ $(document).ready(function() {
         // ------------------------------------------calcul for residential / excelium------------------------------------------
         else if (calc_type == "excelium") {
           $.post(
-            "RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/api/res/",
+            "//RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/res",
             {
               nbapartments: collected_vars.nbapartments,
               nbfloors: collected_vars.nbfloors,
@@ -226,7 +269,7 @@ $(document).ready(function() {
         // ------------------------------------------calcul for commercial/ ------------------------------------------
         if (calc_type === "standard") {
           $.post(
-            "RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/api/com/",
+            "//RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/com/",
             {
               nbcages: collected_vars.nbcages,
               price: price,
@@ -244,7 +287,7 @@ $(document).ready(function() {
 // ------------------------------------------calcul for commercial / premium------------------------------------------
         if (calc_type == "premium") {
           $.post(
-            "RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/api/com/",
+            "//RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/com/",
             {
               nbcages: collected_vars.nbcages,
               price: price,
@@ -262,7 +305,7 @@ $(document).ready(function() {
         // ------------------------------------------calcul for commercial / excelium------------------------------------------
         if (calc_type == "excelium") {
           $.post(
-            "RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/api/com/",
+            "//RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/com/",
             {
               nbcages: collected_vars.nbcages,
               price: price,
@@ -291,7 +334,7 @@ $(document).ready(function() {
         // ------------------------------------------calcul for corporate and hybrid / standard ------------------------------------------
         if (calc_type === "standard") {
           $.post(
-            "RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/corphyb/",
+            "//RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/corphyb/",
             {
               nbocperfloors: collected_vars.nbocperfloors,
               nbbassements: collected_vars.nbbassements,
@@ -312,7 +355,7 @@ $(document).ready(function() {
 // ------------------------------------------calcul for corporate and hybrid / premium ------------------------------------------
         if (calc_type == "premium") {
           $.post(
-            "RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/corphyb/",
+            "//RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/corphyb/",
             {
               nbocperfloors: collected_vars.nbocperfloors,
               nbbassements: collected_vars.nbbassements,
@@ -333,7 +376,7 @@ $(document).ready(function() {
         // ------------------------------------------calcul for corporate and hybrid / standard / excelium ------------------------------------------
         if (calc_type == "excelium") {
           $.post(
-            "RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/corphyb/",
+            "//RocketElevators-env.ux2jw7mvfb.us-east-2.elasticbeanstalk.com/corphyb/",
             {
               nbocperfloors: collected_vars.nbocperfloors,
               nbbassements: collected_vars.nbbassements,
@@ -381,11 +424,11 @@ $(document).ready(function() {
     );
 
     var apartPerFloors = Math.ceil(nbapartments / nbfloors).toFixed(2);
-    console.log(apartPerFloors);
+    // console.log(apartPerFloors);
     var cagesPerFloors = Math.ceil(apartPerFloors / 6).toFixed(2);
-    console.log(cagesPerFloors);
+    // console.log(cagesPerFloors);
     var nbcolumns = Math.ceil(nbfloors / 20).toFixed(2);
-    console.log(nbcolumns);
+    // console.log(nbcolumns);
 
     return {
       business_type: business_type,
