@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Rocket Elevators</title>
+	<meta name="description" content="" />
+	<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+	<!-- mobile settings -->
+	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+	<!-- WEB FONTS : use %7C instead of | (pipe) -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"
+	 rel="stylesheet" type="text/css" />
+
+	<!-- CORE CSS -->
+	<link href="assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+	<!-- REVOLUTION SLIDER -->
+	<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+	<!-- THEME CSS -->
+	<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+	<!-- PAGE LEVEL SCRIPTS -->
+	<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" />
+	<link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+
+
+
+<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/rocket/boxed_background/1.jpg"
+	-->
+
+<body class="smoothscroll enable-animation">
+
+
+
+
+
+	<!-- wrapper -->
+	<div id="wrapper">
+
+		<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+		<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+			<!-- TOP NAV -->
+			<header id="topNav">
+				<div class="container">
+
+					<!-- Mobile Menu Button -->
+					<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+						<i class="fa fa-bars"></i>
+					</button>
+
+					<!-- Logo -->
+					<a class="logo float-left" href="Genesis-Gab.html">
+						<img src="assets/images/rocket/R2.png" alt="" />
+					</a>
+
+					<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+					<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+						<nav class="nav-main">
+
+							<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+							<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+								<li class="active">
+									<!-- HOME -->
+									<a href="Genesis-Gab.html">
+										HOME
+									</a>
+								</li>
+								<li>
+									<!-- SERVICES -->
+									<a class="dropdown-toogle" href="Genesis-Gab.html#services">
+										SERVICES
+
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="Genesis-residential.html">Residential</a>
+										</li>
+										<li>
+											<a href="Genesis-Corporate.html">Corporate</a>
+										</li>
+										<li>
+											<a href="Genesis-residential.html#product">Our Products</a>
+										</li>
+									</ul>
+
+								</li>
+								<li>
+									<!-- WORK -->
+									<a href="Genesis-Gab.html#work">
+										PORTFOLIO
+									</a>
+								</li>
+								<li>
+									<!-- NEWS -->
+									<a href="Genesis-Gab.html#news">
+										NEWS
+									</a>
+								</li>
+								<li>
+									<!-- CLIENTS -->
+									<a href="Genesis-Gab.html#clients">
+										CLIENTS
+									</a>
+								</li>
+								<li>
+									<!-- CONTACT -->
+									<a href="Genesis-Gab.html#contact">
+										CONTACT
+									</a>
+								</li>
+							</ul>
+
+						</nav>
+					</div>
+
+				</div>
+			</header>
+			<!-- /Top Nav -->
+
+		</div>
+
+
+
+		<!-- FORM -->
+		<div class="container">
+			<br><br><br>
+
+			<h3 style="text-align:center;"><strong><em>Complete the quote!</em></strong></h3>
+
+
+			<!--
+								MESSAGES
+								
+									How it works?
+									The form data is posted to php/contact.php where the fields are verified!
+									php.contact.php will redirect back here and will add a hash to the end of the URL:
+										#alert_success 		= email sent
+										#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
+										#alert_mandatory	= email not sent - required fields empty
+										Hashes are handled by assets/js/contact.js
+
+									Form data: required to be an array. Example:
+										contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
+										Also, add `required` to input fields if is a mandatory field. 
+										Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
+
+									PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
+												 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
+
+									WARNING! Do not change the `email` and `name`!
+												contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+												contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+							-->
+
+			<!-- Alert Success -->
+			<div id="alert_success" class="alert alert-success mb-30">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<strong>Thank You!</strong> Your message successfully sent!
+			</div><!-- /Alert Success -->
+
+
+			<!-- Alert Failed -->
+			<div id="alert_failed" class="alert alert-danger mb-30">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<strong>[SMTP] Error!</strong> Internal server error!
+			</div><!-- /Alert Failed -->
+
+
+			<!-- Alert Mandatory -->
+			<div id="alert_mandatory" class="alert alert-danger mb-30">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+			</div><!-- /Alert Mandatory -->
+
+		
+
+			<div class="btncenter">
+				<div class="btn-group">
+					<div class="row">
+					<button class="button col-md-3" id="btnresidential">Residential</button>
+					<button class="button col-md-3" id="btncommercial">Commercial</button>
+					<button class="button col-md-3" id="btncorporate">Corporate</button>
+					<button class="button col-md-3" id="btnhybrid">Hybrid</button>
+				</div>
+			</div>
+		</div>
+			<div class="button-center row">
+				<div id="luxe">
+					<label class="luxe col-md-3.5"><input type="radio" id="standard" value="Standard" name="type_of_cages" checked="checked"><span>Standard</span>
+					</label>
+					<label class="luxe col-md-3.5"><input type="radio" id="premium" value="Premium" name="type_of_cages"><span>Premium</span>
+					</label>
+					<label class="luxe col-md-3.5"><input type="radio" id="excelium" value="Excelium" name="type_of_cages"><span>Excelium</span>
+					</label>
+				</div>
+			</div>
+			<br> <br>
+
+			<hr>
+
+
+			<form enctype="multipart/form-data">
+				<fieldset>
+					<input type="hidden" name="action" value="contact_send" />
+
+				
+
+
+
+
+
+					<div class="residential1">
+							<div class="row">
+						<div id="naparts" class="col-md-4" >
+							<label for="numbers_apartments">Number of apartments *</label>
+							<input required type="text" value="" class="form-control" name="numbers_apartments" id="numbers_apartments">
+						</div>
+						<div id="nfloors" class="col-md-4" >
+							<label for="numbers_floors">Number of floors <span style="font-size:10px;">[Exclude basements]* </span></label>
+							<input required type="text" value="" class="form-control" name="numbers_floors" id="numbers_floors">
+						</div>
+						<div class="col-md-4" id="nbasements">
+							<label for="numbers_basements">Number of basements *</label>
+							<input required type="text" value="" class="form-control" name="numbers_basements" id="numbers_basements">
+						</div>
+						<div class="col-md-4" id="nbusinesses">
+							<label for="numbers_businesses">Number of businesses *</label>
+							<input required type="text" value="" min="1" class="form-control" name="numbers_businesses" id="numbers_businesses">
+						</div>
+						<div class="col-md-4" id="nparkings">
+							<label for="numbers_parkings">Number of parkings </label>
+							<input type="text" value="" class="form-control" name="numbers_parkings" id="numbers_parkings">
+						</div>
+						<div class="col-md-4" id="ncages">
+							<label for="numbers_cages">Number of cages to deploy *</label>
+							<input required type="text" value="" class="form-control" name="numbers_cages" id="numbers_cages">
+						</div>
+						<div class="col-md-4" id="noccperfloor">
+							<label for="numbers_occupantsPerFloors">Number of maximum occupants per floors *</label>
+							<input required type="text" value="" class="form-control" name="numbers_occupantsPerFloors" id="numbers_occupantsPerFloors">
+						</div>
+
+						<div class="col-md-4" id="ndha">
+							<label for="numbers_hourActivity">Number of daily hours activity (max 24hours) *</label>
+							<input required type="text" value="" class="form-control" name="numbers_hourActivity" id="numbers_hourActivity">
+						</div>
+					</div>
+					<!-- </div> -->
+				
+			
+					
+					<hr class="buttoncenter">
+					
+					<div>
+
+			
+					</div>
+					<!-- <div id="sum">
+						<div id="cage1" style="display: none;">
+							<p id="cage2"></p>
+						</div>
+						<div id="totsfees1" style="display: none;">
+							<p id="totsfees2"></p>
+						</div>
+						<div id="totalPrice1" style="display: none;">
+							<p id="fees"></p>
+						</div>
+						<div id="totalPrice" style="display: none;">
+							<p id="total">$0</p>
+						</div>
+					</div> -->
+					
+					<div class="col-md-4 col-sm-4">
+							<div class="toggle-content" style="display: block;">
+								
+								<span class="clearfix">
+									<span class="float-right" id="cage2">0</span>
+									<strong class="float-left">Numbers of cages :</strong>
+								</span>
+								<span class="clearfix">
+									<span class="float-right" id="totsfees2">0$</span>
+									<span class="float-left">Price without fees :</span>
+								</span>
+								<span class="clearfix">
+									<span class="float-right" id="fees">0$</span>
+									<span class="float-left">Installation fees : </span>
+								</span>
+
+								<hr>
+
+								<span class="clearfix">
+									<span class="float-right fs-20" id="total"> 0$</span>
+									<strong class="float-left" >TOTAL:</strong>
+								</span>
+
+								<hr>
+
+								<button class="btn btn-primary btn-lg btn-block fs-15"><i class="fa fa-mail-forward"></i> Place Order Now</button>
+							</div>
+					</div>
+							
+							</fieldset>
+							
+					
+					
+
+					<br>
+
+					<br><br><br>
+
+
+				</fieldset>
+			</form>
+		</div>
+		
+		<!-- /FORM -->
+
+
+
+
+
+
+
+
+		<!-- FOOTER -->
+		<footer id="footer">
+			<div class="container">
+
+
+				<div class="row">
+
+					<!-- col #1 -->
+					<div class="col-md-8">
+
+						<h3 class="letter-spacing-1">WHY US?</h3>
+
+						<!-- Small Description -->
+						<p>
+							We have 1000 employee in 30 country. we done multiple project over dubai(Burj Khalifa tower).
+							Over 2Billions use our project per day.
+						</p>
+						<h2>(418) 580-7055</h2>
+
+						<div class="col-md-6 col-lg-9">
+							<h3 class="footer-title">Rocket Elevators</h3>
+							<div class="row">
+
+								<div class="col-xs-6 col-sm-3">
+									<a class="footer-link" href="Genesis-corporate.html">Corporate</a>
+									<a class="footer-link" href="Genesis-residential.html">Residential</a>
+									<a class="footer-link" href="#contact">Contact</a>
+								</div>
+
+
+							</div>
+						</div>
+
+					</div>
+					<!-- /col #1 -->
+
+					<!-- col #2 -->
+					<div class="col-md-4">
+						<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+						<!-- Newsletter Form -->
+						<p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+						<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!"
+						 data-toastr-position="bottom-right">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+								<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+								<span class="input-group-btn">
+									<button class="btn btn-success" type="submit">Subscribe</button>
+								</span>
+							</div>
+						</form>
+						<!-- /Newsletter Form -->
+
+
+					</div>
+					<!-- /col #2 -->
+
+				</div>
+
+
+			</div>
+
+			<div class="copyright">
+				<div class="container">
+					<ul class="float-right m-0 list-inline mobile-block">
+						<li><a href="#">Terms &amp; Conditions</a></li>
+						<li>&bull;</li>
+						<li><a href="#">Privacy</a></li>
+					</ul>
+					&copy; All Rights Reserved, Rocket Elevators LTD
+				</div>
+			</div>
+
+		</footer>
+		<!-- /FOOTER -->
+
+	</div>
+	<!-- /wrapper -->
+
+
+
+
+	<!-- PRELOADER -->
+	<div id="preloader">
+		<div class="inner">
+			<span class="loader"></span>
+		</div>
+	</div><!-- /PRELOADER -->
+
+
+	<!-- JAVASCRIPT FILES -->
+	<script>var plugin_path = 'assets/plugins/';</script>
+	<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+	<script src="assets/js/scripts.js"></script>
+
+
+	<!-- REVOLUTION SLIDER -->
+	<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+	<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<script src="assets/js/view/demo.revolution_slider.js"></script>
+
+	<!-- REVOLUTION SLIDER -->
+
+	<script src="assets/js/Quote.js"></script>
+
+	<!-- PAGELEVEL SCRIPTS -->
+	<script src="assets/js/contact.js"></script>
+
+
+</body>
+
+</html>
