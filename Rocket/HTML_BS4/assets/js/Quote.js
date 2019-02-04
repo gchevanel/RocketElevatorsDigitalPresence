@@ -107,7 +107,7 @@ $(document).ready(function() {
     computed_result = compute_price(15400, 0.16, collected_vars, "excelium");
   });
   $(".residential1  :input").on("change keyup", function() {
-    console.log("test");
+    // console.log("test");
     var collected_vars = collect_vars();
     computed_result = compute_price(7565, 0.1, collected_vars, "standard");
   });
@@ -234,7 +234,7 @@ $(document).ready(function() {
               feespercent: feespercent
             },
             function(data, status) {
-              console.log("data" + data + "status" + status);
+              // console.log("data" + data + "status" + status);
               $("#cage2").html(data.nbcages);
               $("#totsfees2").html(data.totalsfrais);
               $("#fees").html(data.fees);
@@ -253,7 +253,7 @@ $(document).ready(function() {
               feespercent: feespercent
             },
             function(data, status) {
-              console.log("data" + data + "status" + status);
+              // console.log("data" + data + "status" + status);
               $("#cage2").html(data.nbcages);
               $("#totsfees2").html(data.totalsfrais);
               $("#fees").html(data.fees);
@@ -276,7 +276,7 @@ $(document).ready(function() {
               feespercent: feespercent
             },
             function(data, status) {
-              console.log("data" + data + "status" + status);
+              // console.log("data" + data + "status" + status);
               $("#cage2").html(data.nbcages);
               $("#totsfees2").html(data.totalsfrais);
               $("#fees").html(data.fees);
